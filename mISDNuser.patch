@@ -1,0 +1,11 @@
+--- a/mISDNuser/bridge/bridge.c	2019-11-05 14:10:02.068437647 +0100
++++ b/mISDNuser/bridge/bridge.c	2019-11-04 22:57:29.445457515 +0100
+@@ -147,7 +147,7 @@
+  */
+ static void ph_control(int sock, int c1, int c2)
+ {
+-	unsigned char data[MISDN_HEADER_LEN+sizeof(int)+sizeof(int)];
++	unsigned char data[MISDN_HEADER_LEN+sizeof(int)+sizeof(int)+sizeof(int)+sizeof(int)];
+ 	struct mISDNhead *hh = (struct mISDNhead *)data;
+ 	int len;
+ 	unsigned long *d = (unsigned long *)(data + MISDN_HEADER_LEN);
